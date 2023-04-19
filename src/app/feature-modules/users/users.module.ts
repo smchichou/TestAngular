@@ -20,6 +20,7 @@ import {repoReducer, reposReducer} from "../../core-module/store/repos/repos.red
 import {ReposEffect} from "../../core-module/store/repos/repos.effect";
 import {MatIconModule} from "@angular/material/icon";
 import {DetailComponent} from "./components/repos/detail/detail.component";
+import {SharedModuleModule} from "../../shared-module/shared-module.module";
 
 
 
@@ -34,6 +35,7 @@ import {DetailComponent} from "./components/repos/detail/detail.component";
   imports: [
     CommonModule,
     UsersRoutingModule,
+    SharedModuleModule,
     MatButtonModule,
     ReactiveFormsModule,
     StoreModule.forFeature('AllUsers', userReducer),

@@ -1,12 +1,14 @@
 <div class="repository-stats">
   <h2><mat-icon>timeline</mat-icon> Deposit statistics</h2>
-  <div class="repository">
-    <h3>{{repo?.name}}</h3>
-    <p><mat-icon>device_hub</mat-icon>Nombre de commits : <span class="commit-count">10</span></p>
-    <p><mat-icon>adjust</mat-icon> Nombre d'issues : <span class="issue-count">5</span></p>
-    <p> <mat-icon>usb</mat-icon>Nombre de pull requests : <span class="pr-count">3</span></p>
-    <div class="repo-graph">
-      <!-- Code for repository activity graph goes here -->
+  <div class="repository d-flex justify-content-between flex-wrap" >
+    <div class="w-25">
+      <h3>{{repo?.name}}</h3>
+      <p><mat-icon>device_hub</mat-icon>Nombre de commits : <span class="commit-count">10</span></p>
+      <p><mat-icon>adjust</mat-icon> Nombre d'issues : <span class="issue-count">5</span></p>
+      <p> <mat-icon>usb</mat-icon>Nombre de pull requests : <span class="pr-count">3</span></p>
+    </div>
+    <div class="repo-graph w-75">
+      <app-basic></app-basic>
     </div>
   </div>
 </div>
