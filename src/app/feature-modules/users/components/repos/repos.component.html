@@ -1,0 +1,21 @@
+<div class=" row ">
+  <div class="col-12 d-flex justify-content-end mb-4">
+    <div class="input-group  w-25 ">
+      <input class="form-control justify-content-end " [formControl]="searchTerm" placeholder="Search..."
+             aria-describedby="search-addon"/>
+      <span class="input-group-text border-0" id="search-addon">
+    <i class="fa fa-search"></i>
+  </span>
+    </div>
+  </div>
+  <div style="flex-wrap: wrap;display: flex;">
+    <div class="card " *ngFor="let repo of filteredrepos$ | async" >
+      <div class="card-body pe-auto" routerLink="{{repo.name}}">
+        <h3 class="card-title fw-bolder text-primary"><mat-icon style="color: gray">book</mat-icon>{{repo.name}} </h3>
+        <p class="card-text">{{repo.description}} </p>
+        <p class="card-text"><mat-icon style="color: #dc560d">star</mat-icon> ({{repo.stargazers_count}}) </p>
+      </div>
+    </div>
+  </div>
+</div>
+

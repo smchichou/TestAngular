@@ -1,0 +1,15 @@
+@import "../../components/list/list.component";
+
+.card {
+  flex: 0 0 32% !important;
+  margin: 3px !important;
+
+}
+:host {
+  .mat-icon {
+    vertical-align: bottom;
+  }
+}
+.pe-auto{
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<header *ngIf="profil">
+<div class="container">
+
+    <div class="profile">
+
+      <div class="profile-image">
+
+        <img [src]="profil.avatar_url" alt="">
+
+      </div>
+      <div class="profile-user-settings">
+        <h1 class="profile-user-name">{{profil.login}}</h1>
+      </div>
+      <div>
+        <small style="color: gray;font-size: 16px">{{profil.location}}</small>
+      </div>
+      <div class="profile-stats">
+
+        <ul>
+          <li><a routerLink="repos" (click)="dispatchEvent('Repos')"><span class="profile-stat-count" >{{nbrRepos}}</span> repos</a></li>
+          <li><a routerLink="followers"(click)="dispatchEvent('Followers')"><span class="profile-stat-count" >{{nbrFollowers}}</span> followers</a></li>
+        </ul>
+
+      </div>
+
+      <div class="profile-bio">
+
+        <p>{{profil.bio}}</p>
+
+      </div>
+
+    </div>
+    <!-- End of profile section -->
+
+  </div>
+  <!-- End of container -->
+
+</header>

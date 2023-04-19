@@ -1,0 +1,56 @@
+.card-image {
+  display: block;
+
+  background-size: cover;
+}
+
+.card-image > img {
+  display: block;
+  width: 100%;
+}
+.card-list {
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.card {
+  flex: 0 0 16%;
+  margin: 3px;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+  box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+  display: block;
+  padding: 1em 0.5em;
+  color: #515151;
+  text-decoration: none;
+}
+
+.card-description > h2 {
+  margin: 0 0 0.5em;
+}
+
+.card-description > p {
+  margin: 0;
+}
+button:hover {
+  background-color: blue; /* Change the background color on hover */
+  color: white; /* Change the text color on hover */
+  cursor: pointer; /* Change the cursor to a hand pointer on hover */
+}
+.form-control:focus{
+  box-shadow: none !important;
+}
+

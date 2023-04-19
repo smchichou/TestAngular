@@ -1,0 +1,24 @@
+<div class=" row ">
+  <div class="col-12 d-flex justify-content-end mb-4">
+    <div class="input-group  w-25 ">
+      <input class="form-control justify-content-end " [formControl]="searchTerm" placeholder="Search..."
+             aria-describedby="search-addon"/>
+      <span class="input-group-text border-0" id="search-addon">
+    <i class="fa fa-search"></i>
+  </span>
+    </div>
+  </div>
+  <div style="flex-wrap: wrap;display: flex;">
+    <div class="card" *ngFor="let follower of filteredFollowers$ | async">
+      <a class="card-image">
+        <img [src]="follower.avatar_url"/>
+      </a>
+      <a class="card-description">
+        <h2 class="text-center">{{follower.login}}</h2>
+        <div class="d-flex justify-content-center">
+          <button mat-raised-button color="primary" routerLink="/users/{{follower.login}}">Profil</button>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
